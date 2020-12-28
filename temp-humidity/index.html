@@ -82,7 +82,7 @@
                   <li>
                     <a href="/"><i class="fas fa-home"></i>  Home </a>
                   </li>
-                  <li class="active">
+                  <li>
                     <a href="/about/"><i class="fas fa-user-ninja"></i>  About </a>
                   </li>
                   <li>
@@ -100,7 +100,7 @@
                   <li>
                     <a href="/research/"><i class="fas fa-flask"></i>  Research </a>
                   </li>
-                  <li class="dropdown">
+                  <li class="dropdown active">
                     <a href="#"><i class="fas fa-magic"></i>  Other pages  <i class="fas fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
                       <li><a href="/seminar-timer/"><i class="fas fa-stopwatch"></i>  Seminar timer</a></li>
@@ -163,8 +163,149 @@
     </section>
     <section id="maincontent">
       <div class="container">
-        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/apps/matlab_visualizations/383044"></iframe>
-
+		<div class="row">
+			<h3>Temperature and relative humidity recorded from within my loft office</h3>
+			The plot below shows data recorded over the last 24 hours. Data is recorded live and updates when the page is refreshed.
+		</div>
+		<div class="row">
+			<div class="span12" align="center">
+				<iframe width="450"  height="260" src="https://thingspeak.com/apps/matlab_visualizations/383044?dynamic=true"></iframe>
+			</div>
+		</div>
+		<div class="row">		
+			<div class="span4" align="center">
+				<table align="center" style="background:#fafafa; border: 0.5em solid #fafafa;">
+					<thead>
+					<tr>
+						<th colspan="2">Most recent readings</th>
+							<script>
+								fetch("https://api.thingspeak.com/channels/1268628/feeds.json?results=1")
+								  .then(function (response) {
+									return response.json();
+								  })
+								  .then(function (myJson) {
+									var dateTimeRecent = new Date(myJson.feeds["0"].created_at);
+									//dateTimeRecent = myJson.feeds["0"].created_at;
+									
+									const dateRecentSplit = dateTimeRecent.toDateString().split(' ');
+									const dateRecent = dateRecentSplit[1] + ' ' + dateRecentSplit[2];
+									const timeRecent = dateTimeRecent.toTimeString().split(' ')[0];;
+									
+									document.querySelector("#recentTempTime").innerHTML = timeRecent + ' (' + dateRecent + ')';
+																
+									const recentTemp = myJson.feeds["0"].field1 ;
+									document.querySelector("#recentTemp").innerHTML = parseFloat(recentTemp).toFixed(1) + '&nbsp;&deg;C';
+									
+									const recentHumi = myJson.feeds["0"].field2 ;
+									document.querySelector("#recentHumi").innerHTML = parseFloat(recentHumi).toFixed(0) + '&nbsp;%';
+								  })
+								  .catch(function (error) {
+									console.log("Error: " + error);
+								  }
+								);
+							</script>
+					</tr>
+					</thead>
+					<tbody >
+					<tr>
+						<td >Time (date):</td>
+						<td id="recentTempTime"></td>
+					</tr>
+					<tr>
+						<td >Temperature: </td>
+						<td id="recentTemp"></td>
+					</tr>
+					<tr>
+						<td style="padding-right:0.5em">Rel. Humidity:</td>
+						<td id="recentHumi">Y&nbsp;%</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div class="span4" align="center">
+				<table align="center" style="background:#fafafa; border: 0.5em solid #fafafa; ">
+					<thead>
+					<tr>
+						<th colspan="2">Average (last hour)</th>
+						<script>
+								fetch("https://api.thingspeak.com/channels/1268628/feeds.json?results=240&average=60")
+								  .then(function (responseHr) {
+									return responseHr.json();
+								  })
+								  .then(function (myJsonHour) {
+									const hourTemp = myJsonHour.feeds["0"].field1 ;
+									document.querySelector("#hourTemp").innerHTML = parseFloat(hourTemp).toFixed(1) + '&nbsp;&deg;C';
+									
+									const hourHumi = myJsonHour.feeds["0"].field2 ;
+									document.querySelector("#hourHumi").innerHTML = parseFloat(hourHumi).toFixed(0) + '&nbsp;%';
+								  })
+								  .catch(function (errorHr) {
+									console.log("Error: " + errorHr);
+								  }
+								);
+							</script>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Temperature:</td>
+						<td id="hourTemp"></td>
+					</tr>
+					<tr>
+						<td style="padding-right:0.5em">Rel. Humidity:</td>
+						<td id="hourHumi"></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div class="span4" align="center">
+			<div height="106px">
+				<table align="center" style="background:#fafafa; border: 0.5em solid #fafafa;">
+					<thead>
+					<tr>
+						<th colspan="2">Average (last day)</th>
+						<script>
+								fetch("https://api.thingspeak.com/channels/1268628/feeds.json?days=1&average=daily")
+								  .then(function (responseDay) {
+									return responseDay.json();
+								  })
+								  .then(function (myJsonDay) {
+									const dayTemp = myJsonDay.feeds["0"].field1 ;
+									document.querySelector("#dayTemp").innerHTML = parseFloat(dayTemp).toFixed(1) + '&nbsp;&deg;C';
+									
+									const dayHumi = myJsonDay.feeds["0"].field2 ;
+									document.querySelector("#dayHumi").innerHTML = parseFloat(dayHumi).toFixed(0) + '&nbsp;%';
+								  })
+								  .catch(function (errorDay) {
+									console.log("Error: " + errorDay);
+								  }
+								);
+							</script>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td >Temperature:</td>
+						<td id="dayTemp"></td>
+					</tr>
+					<tr>
+						<td style="padding-right:0.5em">Rel. Humidity:</td>
+						<td id="dayHumi"></td>
+					</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="row">
+			<div class="span12" align="center">
+							
+				<b>Minimum temperature (last 24 hours):</b>&nbsp;X&nbsp;&deg;C (Date/Time)<br>
+				<b>Maximum temperature (last 24 hours):</b>&nbsp;X&nbsp;&deg;C (Date/Time)<p id="maxTempDay"></p>
+			</div>		
+		</div> -->
       </div>
     </section>
     <!-- Footer
