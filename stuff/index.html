@@ -1,19 +1,366 @@
-<html>
-<head><meta charset="utf-8" /></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145052584-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145052584-1');
+</script>
+  <meta charset="utf-8">
+  <title>Stuff</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read about me, my adventures in the outdoors or my scientific research">
+  <meta name="author" content="Alice Henley">
+  <!-- styles -->
+  <link href="/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/assets/css/prettyPhoto.css" rel="stylesheet">
+  <link href="/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+  <link href="/assets/css/flexslider.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <link href="/assets/color/purple.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"><!-- -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/v4-shims.css"><!-- -->
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,600,400italic|Open+Sans:400,600,700" rel="stylesheet">
+
+  <!-- AH: Added from the snazzy favicon maker website -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/ico/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/ico/favicon-16x16.png">
+  <link rel="manifest" href="/assets/ico/site.webmanifest">
+  <link rel="mask-icon" href="/assets/ico/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/assets/ico/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- fav and touch icons -->
+  <link rel="shortcut icon" href="/assets/ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="/assets/ico/apple-touch-icon-57-precomposed.png">
+
+  <!-- =======================================================
+    Theme Name: Lumia
+    Theme URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+  <meta property="og:title" content="Alice? Alice? Who the...">
+  <meta property="og:description" content="Read about me, my adventures in the outdoors or my scientific research">
+  <meta property="og:image" content="https://alicehenley.github.io/assets/ico/android-chrome-512x512.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alicehenley.github.io/about/">
+</head>
+
 <body>
-  <h3>Walkies</h3>
-  <p>Use the links below to download the pdf overview of the walk route with any additional details highlighted. Alternative SVG download links also provided in parentheses.</p>
+  <div id="wrapper">
+    <header>
+      <!-- Navbar
+    ================================================== -->
+      <div class="navbar navbar-static-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <!-- logo -->
+            <div class="logo">
+              <a href="/">
+                <!-- Alice Henley -->
+                <img src="/assets/img/logo.png" alt>
+              </a>
+            </div>
+            <!-- end logo -->
+
+            <!-- top menu -->
+            <div class="navigation">
+              <nav>
+                <ul class="nav topnav">
+                  <li>
+                    <a href="/"><i class="fas fa-home"></i>  Home </a>
+                  </li>
+                  <li>
+                    <a href="/about/"><i class="fas fa-user-ninja"></i>  About </a>
+                  </li>
+                  <li>
+                    <a href="/blog/"><i class="fas fa-hiking"></i>  Adventures blog</a>
+                  </li>
+                  <!-- <li class="dropdown"> -->
+                  <!-- <a href="#"><i class="icon-book"></i> Adventures <i class="icon-angle-down"></i></a> -->
+                  <!-- <ul class="dropdown-menu"> -->
+                  <!-- <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li> -->
+                  <!-- <li><a href="/unusedlumia/blog-right-sidebar.html">Blog right sidebar</a></li> -->
+                  <!-- <li><a href="/unusedlumia/post-left-sidebar.html">Post left sidebar</a></li> -->
+                  <!-- <li><a href="/unusedlumia/post-right-sidebar.html">Post right sidebar</a></li> -->
+                  <!-- </ul> -->
+                  <!-- </li> -->
+                  <li>
+                    <a href="/research/"><i class="fas fa-flask"></i>  Research </a>
+                  </li>
+                  <li class="dropdown active">
+                    <a href="#"><i class="fas fa-magic"></i>  Other pages  <i class="fas fa-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="/seminar-timer/"><i class="fas fa-stopwatch"></i>  Seminar timer</a></li>
+					  <!--<li><a href="/netlogo-fireworks/"><i class="fas fa-fire"></i>  NetLogo fireworks</a></li>-->
+					  <li><a href="/stuff/"><i class="fas fa-cat"></i>  Stuff</a></li>
+                      <!-- <li><a href="/unusedlumia/portfolio-2cols.html">Portfolio 2 columns</a></li> -->
+                      <!-- <li><a href="/unusedlumia/portfolio-3cols.html">Portfolio 3 columns</a></li> -->
+                      <!-- <li><a href="/unusedlumia/portfolio-4cols.html">Portfolio 4 columns</a></li> -->
+                      <!-- <li><a href="/unusedlumia/portfolio-detail.html">Portfolio detail</a></li> -->
+                      <!-- <li><a href="/unusedlumia/media.html">Media</a></li> -->
+                      <!-- <li><a href="/unusedlumia/color-scheme.html">10 Theme colors</a></li> -->
+                      <!-- <li><a href="/unusedlumia/buttons.html">Buttons</a></li> -->
+                      <!-- <li><a href="/unusedlumia/components.html">Components</a></li> -->
+                      <!-- <li><a href="/unusedlumia/animations.html">56 Animations</a></li> -->
+                      <!-- <li><a href="/unusedlumia/icons.html">Icons</a></li> -->
+                      <!-- <li><a href="/unusedlumia/icon-variations.html">Icon variations</a></li> -->
+                      <!-- <li class="dropdown"><a href="#">3rd level <i class="icon-angle-right"></i></a> -->
+                        <!-- <ul class="dropdown-menu sub-menu"> -->
+                          <!-- <li><a href="#">Example menu</a></li> -->
+                          <!-- <li><a href="#">Example menu</a></li> -->
+                          <!-- <li><a href="#">Example menu</a></li> -->
+                        <!-- </ul> -->
+                      <!-- </li> -->
+                      <!-- <li><a href="/unusedlumia/pricingbox.html">Pricing boxes</a></li> -->
+                      <!-- <li><a href="/unusedlumia/testimonials.html">Testimonials</a></li> -->
+                      <!-- <li><a href="/unusedlumia/404.html">404</a></li> -->
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- end menu -->
+
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Subintro
+================================================== -->
+    <section id="subintro">
+      <div class="container">
+        <div class="row">
+          <div class="span8">
+            <ul class="breadcrumb">
+              <li><a href="/"><i class="fas fa-home"></i></a> <i class="fas fa-angle-right"></i></li>&nbsp;
+              <li><a href="#">Other pages</a>&nbsp;<i class="fas fa-angle-right"></i></li>&nbsp;
+              <li class="active">Stuff</li>
+            </ul>
+          </div>
+          <!-- <div class="span4"> -->
+          <!-- <div class="search"> -->
+          <!-- <form class="input-append"> -->
+          <!-- <input class="search-form" id="appendedPrependedInput" type="text" placeholder="Search here.." /> -->
+          <!-- <button class="btn btn-dark" type="submit">Search</button> -->
+          <!-- </form> -->
+          <!-- </div> -->
+          <!-- </div> -->
+        </div>
+      </div>
+    </section>
+    <section id="maincontent">
+      <div class="container">
+		<div class="row">
+			<h3>Walkies</h3>
+			<p>I'm putting together nice walking routes with pubs local to Nottingham with easy access by public transport. Use the links below to download a pdf (or SVG) that gives an overview of the walk route with any additional details highlighted. The svg download links should open directly in your browser.</p>
+  <table class="table table-striped table-sm table-hover">
+  <thead class="thead">
+	<tr>
+	<th>
+		Route
+	</th>
+	<th style="text-align:center">
+		PDF
+	</th>
+	<th style="text-align:center">
+		SVG
+	</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+	<td>
+		<h5>Beering around South Belper</h5>
+		<p>Undulating 11 km (6.8 mile) walk through fields and woodland with the Derwent not far with a fair amount of road walking, too. Easy public transport options and parking available in Duffield. Options for cutting short or lengthening to include surrounding villages. Opening times included are for a Saturday.</p>
+	</td>
+	<td>
+		<a href="/stuff/walks/beerybelper.pdf" title="Download PDF"><i class="fa fa-file-pdf icon-square icon-48"></i></a>
+	</td>
+	<td>
+		<a href="/stuff/walks/beerybelper.svg" title="Download SVG"><i class="fas fa-file-image icon-square icon-48"></i></a>
+	</td>
+  </tr>
+	<tr>
+	<td>
+		<h5>Semi-urban loop walk from Arnold</h5>
+		<p>14.7 km (9 mile) walk taking in local parks and pubs around Arnold, Gedling, Mapperley and Woodthorpe. Two steep but short ascents over Mapperley. A good walk for winter as mostly on paved/gravel surfaces.</p>
+	</td>
+	<td>
+		<a href="/stuff/walks/local-urban-parks.pdf" title="Download PDF"><i class="fa fa-file-pdf icon-square icon-48"></i></a>
+	</td>
+	<td>
+		<a href="/stuff/walks/local-urban-parks_smol.svg" title="Download SVG"><i class="fas fa-file-image icon-square icon-48"></i></a>
+	</td>
+  </tr>
+  </tr>
+	<tr>
+	<td>
+		<h5>East Leake loop walk via West Leake</h5>
+		<p>12.6 km (7.8 mile) walk with only one short sharp hill start/finishing in East Leake (accessible by NCT bus). 3 pubs are included on the map, along with a spot to see alpacas!</p>
+	</td>
+	<td>
+		<a href="/stuff/walks/LeakeLoop.pdf" title="Download PDF"><i class="fa fa-file-pdf icon-square icon-48"></i></a>
+	</td>
+	<td>
+		<a href="/stuff/walks/E-WLeake_loop-smol.svg" title="Download SVG"><i class="fas fa-file-image icon-square icon-48"></i></a>
+	</td>
+  </tr>
+	<tr>
+	<td>
+		<h5>Matlock loop walk via Matlock Bath</h5>
+		<p>9.6 km (6 mile) walk with a fair ascent (total 474 m) starting from Matlock station, heading over Masson Hill to Matlock Bath for some chips and then back to Matlock via High tor. Many, many decent local pubs to visit!</p>
+	</td>
+	<td>
+		<a href="/stuff/walks/Matlock-loop.pdf" title="Download PDF"><i class="fa fa-file-pdf icon-square icon-48"></i></a>
+	</td>
+	<td>
+		<a href="/stuff/walks/Matlock-loop.svg" title="Download SVG"><i class="fas fa-file-image icon-square icon-48"></i></a>
+	</td>
+  </tr>
+	<tr>
+	<td>
+		<h5>Hucknall/Newstead</h5>
+		<p>In development - see later.</p>
+	</td>
+	<td>
+		<!--<a href="/stuff/walks/Hucknall.pdf" title="Download PDF"><i class="fa fa-file-pdf icon-square icon-48"></i></a>-->
+	</td>
+	<td>
+		<!--<a href="/stuff/walks/Hucknall.svg" title="Download SVG"><i class="fas fa-file-image icon-square icon-48"></i></a>-->
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<h5>Calverton/Oxton</h5>
+		<p>In development - see later.</p>
+	</td>
+	<td>
+		<!--<a href="/stuff/walks/Hucknall.pdf" title="Download PDF"><i class="fa fa-file-pdf icon-square icon-48"></i></a>-->
+	</td>
+	<td>
+		<!--<a href="/stuff/walks/Hucknall.svg" title="Download SVG"><i class="fas fa-file-image icon-square icon-48"></i></a>-->
+	</td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="row">
+  <h3><i>Other</i> stuff</h3>
   <ul>
-  <li><a href="https://alicehenley.github.io/stuff/beerybelper.pdf">Beering around Belper map</a> (<a href="https://alicehenley.github.io/stuff/beerybelper.svg">or download as SVG</a>)</li>
-  <li><a href="https://alicehenley.github.io/stuff/local-urban-parks.pdf">Local urban walk (CW; GCP) Arnold loop via Mapps./Gedling</a> (<a href="https://alicehenley.github.io/stuff/local-urban-parks_smol.svg">or download as SVG</a>)</li>
-  <li><a href="https://alicehenley.github.io/stuff/LeakeLoop.pdf">Leake Loop</a> (<a href="https://alicehenley.github.io/stuff/E-WLeake_loop-smol.svg">or download as SVG</a>)</li>
-    <li><a href="https://alicehenley.github.io/stuff/Matlock-loop.pdf">Matlock Loop</a> (<a href="https://alicehenley.github.io/stuff/Matlock-loop.svg">or download as SVG</a>)</li>
-    <li>Hucknall/Newstead in development</li>
-    <li>Calvo/Oxton in development</li>
-</ul>
-  <h3>Misc.</h3>
-  <ul>
-    <li><a href="https://alicehenley.github.io/stuff/sea-urchin.html">Sea Urchin Trajectory Mapping 3D</a></li>
+    <li><a href="/stuff/misc/sea-urchin.html">Sea Urchin Trajectory Mapping 3D</a></li>
   </ul>
-  </body>
+		</div>
+		
+              </div>
+    </section>
+    <!-- Footer
+ ================================================== -->
+    <footer class="footer">
+    <div class="container">
+        <div class="row">
+        <div class="span4">
+          <div class="widget">
+            <h5> Read more</h5>
+            <ul class="regular">
+              <li><a href="/about/">About me</a></li>
+              <li><a href="/blog/">Adventures blog</a></li>
+              <li><a href="/research/">Scientific research</a></li>
+              <li><a href="/seminar-timer/">Seminar timer</a></li>
+              <!-- <li><a href="#">Press releases</a></li> -->
+              <!-- <li><a href="#">Get in touch with us</a></li> -->
+            </ul>
+          </div>
+        </div>
+        <div class="span4">
+          <div class="widget">
+            
+          </div>
+
+        </div>
+        <div class="span4">
+          <div class="widget">
+            <h5>Get in touch</h5>
+            <!-- <address> -->
+            <!-- <i class="icon-home"></i> <strong>Lumia company, Inc.</strong><br> -->
+            <!-- X104 Awesome ville, Suite AB12<br> -->
+            <!-- Jakarta 12420 Indonesia -->
+            <!-- </address> -->
+            <p>
+              <!-- <i class="icon-phone"></i> (123) 456-7890 - (123) 555-8890<br> -->
+              <i class="far fa-envelope"></i>  alicehenley@outlook.com
+            </p>
+          </div>
+          <div class="widget">
+              <ul class="social">
+				<li><a href="https://www.instagram.com/alicehnom/" data-placement="bottom" title="Instagram"><i class="fab fa-instagram icon-social icon-48"></i></a></li>
+                <li><a href="https://twitter.com/alice_henley1" data-placement="bottom" title="Twitter"><i class="fab fa-twitter icon-social icon-48"></i></a></li>
+                <li><a href="https://www.facebook.com/AliceHenley" data-placement="bottom" title="Facebook"><i class="fab fa-facebook icon-social icon-48"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/alice-henley-489b8610a/" data-placement="bottom" title="Linkedin"><i class="fab fa-linkedin icon-social icon-48"></i></a></li>
+                <li><a href="https://www.researchgate.net/profile/Alice_Henley3" data-placement="bottom" title="Research gate">
+                    <i class="fab fa-researchgate icon-social icon-48"></i>
+                  </a></li>
+                <!-- <li><a href="" data-placement="bottom" title="Pinterest"><i class="icon-pinterest icon-square icon-32"></i></a></li> -->
+                <!-- <li><a href="#" data-placement="bottom" title="Google plus"><i class="icon-google-plus icon-square icon-32"></i></a></li> -->
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="verybottom">
+      <div class="container">
+        <div class="row">
+          <div class="span6">
+            <p>
+              © Lumia - All right reserved
+            </p>
+          </div>
+          <div class="span6">
+            <div class="pull-right">
+              <div class="credits">
+                <!--
+                    All the links in the footer should remain intact.
+                    You can delete the links only if you purchased the pro version.
+                    Licensing information: https://bootstrapmade.com/license/
+                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Lumia
+                  -->
+                Created by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</footer>
+  </div>
+  <!-- end wrapper -->
+  <a href="#" class="scrollup"><i class="fas fa-chevron-circle-up icon-square icon-48 active"></i></a>
+
+  <script src="/assets/js/jquery.js"></script>
+  <script src="/assets/js/raphael-min.js"></script>
+  <script src="/assets/js/jquery.easing.1.3.js"></script>
+  <script src="/assets/js/bootstrap.js"></script>
+  <script src="/assets/js/google-code-prettify/prettify.js"></script>
+  <script src="/assets/js/jquery.elastislide.js"></script>
+  <script src="/assets/js/jquery.prettyPhoto.js"></script>
+  <script src="/assets/js/jquery.flexslider.js"></script>
+  <script src="/assets/js/jquery-hover-effect.js"></script>
+  <script src="/assets/js/animate.js"></script>
+
+  <!-- Template Custom JavaScript File -->
+  <script src="/assets/js/custom.js"></script>
+
+</body>
 </html>
