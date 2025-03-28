@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="span12">
+            Input letters to shuffle:&nbsp; <input type="text" id="textInput" value="hi there i am a mouse" style="width: 180px">&nbsp; &nbsp;
+            <button id="shuffleBtn" onclick="shuffle();">Shuffle</button> &nbsp; &nbsp;
+            <button id="refreshPgBtn" value="Reload" onclick="window.location.reload();">Reload</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span12" id="flashyflash" align="center" style="background-color: rgb(255, 255, 255);">
+            <div style="font-size:20px; background-color: white;" align="center">
+              <input id="sTxt" type="text" style="font-size:20px;; width: auto; height: auto; 
+				 border: none;  text-align: center;
+				font-weight: bold; color: black;">
+            </div>
+            <canvas id="canvass" width="300" height="300" style="border:1px solid #000000;"></canvas>
+<script>
+		var canvwid;
+		var radius;
+		var textOriginal;
+		var tLen;
+		var chars;
+		var c;
+		var ctx;
+		var theta;
+				
+		function setupText() {
+			textOriginal = document.getElementById("textInput").value; 
+			txt = textOriginal.replace(/\s+/g, '');
+			tLen = txt.length;
+
+			theta = (2 * Math.PI)/tLen;
+			
+		}
+
+		function shuffle() {
+			setupText();
+			stxtin = document.getElementById("sTxt"); 
+			stxtin.value = txt;
+			chars = txt.toUpperCase().split("");
+			chars.sort(() => 0.5 - Math.random());
+			txt = chars.join("");
+			stxtin.value = txt;
+
+			c = document.getElementById("canvass");
+			ctx = c.getContext("2d");
+			
+			canvwid = c.width;
+			ctx.clearRect(0, 0, canvwid, canvwid );
+			radius = (canvwid / 2) - 20;
+			ctx.font = "20px Arial";
+
+			for (let i = 0; i < tLen; i++) {
+			  //text += cars[i] + "<br>";
+			  ctx.fillText(chars[i], (canvwid/2)+(radius * Math.cos(i * theta))-5, (canvwid/2)+(radius * Math.sin(i * theta))+5);
+			}
+
+			//ctx.strokeStyle = "red";
+			//ctx.beginPath();
+			//ctx.arc(150, 150, radius, 0, 2 * Math.PI);
+			//ctx.stroke();
+			
+		}
+    </script>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
